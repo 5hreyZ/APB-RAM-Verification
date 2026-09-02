@@ -1,0 +1,338 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 820" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    
+    <linearGradient id="tbGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="envGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Component Box Gradients -->
+    <linearGradient id="testGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+
+    <linearGradient id="genGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+
+    <linearGradient id="drvGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#3730a3" />
+    </linearGradient>
+
+    <linearGradient id="monGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#5b21b6" />
+    </linearGradient>
+
+    <linearGradient id="sbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+
+    <linearGradient id="covGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#0f766e" />
+    </linearGradient>
+
+    <linearGradient id="ifGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="50%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <linearGradient id="dutGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+
+    <linearGradient id="svaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e11d48" />
+      <stop offset="100%" stop-color="#be123c" />
+    </linearGradient>
+
+    <!-- Drop Shadow Filters -->
+    <filter id="shadow" x="-8%" y="-8%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Arrow Markers -->
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#60a5fa" />
+    </marker>
+    <marker id="arrowCyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#38bdf8" />
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34d399" />
+    </marker>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#c084fc" />
+    </marker>
+    <marker id="arrowAmber" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24" />
+    </marker>
+    <marker id="arrowRose" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f43f5e" />
+    </marker>
+  </defs>
+
+  <style>
+    .title-main { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 20px; font-weight: 800; fill: #f8fafc; letter-spacing: 0.5px; }
+    .title-sec { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 14px; font-weight: 700; fill: #cbd5e1; }
+    .node-title { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 15px; font-weight: 700; fill: #ffffff; }
+    .node-sub { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 11px; fill: #e2e8f0; opacity: 0.9; }
+    .node-desc { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 11px; fill: #94a3b8; }
+    .conn-label { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 11px; font-weight: 600; fill: #93c5fd; }
+    .tag { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+  </style>
+
+  <!-- Deep Background Canvas -->
+  <rect width="1100" height="820" rx="16" fill="url(#bgGrad)" stroke="#334155" stroke-width="2" />
+
+  <!-- ========================================================================= -->
+  <!-- 1. TOP-LEVEL TESTBENCH CONTAINER (tb_top)                                 -->
+  <!-- ========================================================================= -->
+  <rect x="25" y="25" width="1050" height="770" rx="14" fill="url(#tbGrad)" stroke="#475569" stroke-width="1.8" stroke-dasharray="6,4" />
+  <rect x="45" y="15" width="260" height="26" rx="6" fill="#1e293b" stroke="#64748b" stroke-width="1.2" />
+  <text x="55" y="32" class="title-main" style="font-size: 13px; fill: #38bdf8;">TESTBENCH TOP (tb_top.sv)</text>
+
+  <!-- ========================================================================= -->
+  <!-- 2. TESTCASE SELECTION / DISPATCHER PANEL (Left Side)                     -->
+  <!-- ========================================================================= -->
+  <g transform="translate(50, 70)">
+    <!-- Container -->
+    <rect width="210" height="430" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" filter="url(#shadow)" />
+    
+    <!-- Header -->
+    <path d="M 0 12 Q 0 0 12 0 L 198 0 Q 210 0 210 12 L 210 40 L 0 40 Z" fill="url(#testGrad)" />
+    <text x="105" y="25" text-anchor="middle" class="node-title">Testcase Dispatcher</text>
+    <text x="105" y="55" text-anchor="middle" class="node-sub" style="fill:#38bdf8;">+TESTNAME=&lt;test&gt;</text>
+
+    <!-- Test List Chips -->
+    <g transform="translate(15, 75)">
+      <rect width="180" height="45" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <text x="10" y="20" class="node-title" style="font-size: 12px; fill: #67e8f9;">test_base</text>
+      <text x="10" y="36" class="node-desc">Smoke &amp; Sanity Test</text>
+    </g>
+
+    <g transform="translate(15, 130)">
+      <rect width="180" height="45" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <text x="10" y="20" class="node-title" style="font-size: 12px; fill: #67e8f9;">test_random</text>
+      <text x="10" y="36" class="node-desc">1000+ CRV Stress Transfers</text>
+    </g>
+
+    <g transform="translate(15, 185)">
+      <rect width="180" height="45" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <text x="10" y="20" class="node-title" style="font-size: 12px; fill: #67e8f9;">test_byte_strobe</text>
+      <text x="10" y="36" class="node-desc">PSTRB[3:0] Mask Verification</text>
+    </g>
+
+    <g transform="translate(15, 240)">
+      <rect width="180" height="45" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <text x="10" y="20" class="node-title" style="font-size: 12px; fill: #67e8f9;">test_error_handling</text>
+      <text x="10" y="36" class="node-desc">PSLVERR Protocol Injections</text>
+    </g>
+
+    <g transform="translate(15, 295)">
+      <rect width="180" height="45" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <text x="10" y="20" class="node-title" style="font-size: 12px; fill: #67e8f9;">test_b2b_stress</text>
+      <text x="10" y="36" class="node-desc">Zero-Delay Burst Collisions</text>
+    </g>
+
+    <g transform="translate(15, 350)">
+      <rect width="180" height="45" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" />
+      <text x="10" y="20" class="node-title" style="font-size: 12px; fill: #67e8f9;">test_wait_states</text>
+      <text x="10" y="36" class="node-desc">Inter-Packet Latency Jitter</text>
+    </g>
+  </g>
+
+  <!-- Connection: Testcase -> Environment -->
+  <path d="M 260 270 L 300 270" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="4,3" marker-end="url(#arrowCyan)" />
+  <rect x="265" y="245" width="30" height="18" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-width="1" />
+  <text x="280" y="258" text-anchor="middle" style="font-family: sans-serif; font-size: 9px; fill: #38bdf8; font-weight: bold;">BUILDS</text>
+
+  <!-- ========================================================================= -->
+  <!-- 3. VERIFICATION ENVIRONMENT (apb_env.sv)                                  -->
+  <!-- ========================================================================= -->
+  <g transform="translate(305, 55)">
+    <!-- Container -->
+    <rect width="740" height="465" rx="14" fill="url(#envGrad)" stroke="#6366f1" stroke-width="1.8" filter="url(#shadow)" />
+    
+    <!-- Header Badge -->
+    <rect x="20" y="-12" width="330" height="26" rx="6" fill="#312e81" stroke="#818cf8" stroke-width="1.2" />
+    <text x="30" y="5" class="title-sec" style="font-size: 12px; fill: #c7d2fe;">VERIFICATION ENVIRONMENT (apb_env.sv)</text>
+
+    <!-- Generator Component -->
+    <g transform="translate(35, 30)">
+      <rect width="190" height="90" rx="10" fill="url(#genGrad)" stroke="#60a5fa" stroke-width="1.5" filter="url(#shadow)" />
+      <text x="95" y="28" text-anchor="middle" class="node-title">Generator</text>
+      <text x="95" y="48" text-anchor="middle" class="node-sub">apb_generator.sv</text>
+      <line x1="20" y1="58" x2="170" y2="58" stroke="#ffffff" stroke-opacity="0.2" />
+      <text x="95" y="74" text-anchor="middle" class="node-desc" style="fill: #dbeafe;">CRV Stimulus Sequences</text>
+    </g>
+
+    <!-- Connection: Generator -> Driver (Mailbox) -->
+    <path d="M 225 75 L 345 75" stroke="#60a5fa" stroke-width="2.5" marker-end="url(#arrowBlue)" />
+    <rect x="238" y="52" width="95" height="20" rx="5" fill="#1e293b" stroke="#60a5fa" stroke-width="1" />
+    <text x="285" y="66" text-anchor="middle" class="conn-label" style="font-size: 9.5px;">gen2drv_mbx</text>
+
+    <!-- Driver Component -->
+    <g transform="translate(355, 30)">
+      <rect width="190" height="90" rx="10" fill="url(#drvGrad)" stroke="#818cf8" stroke-width="1.5" filter="url(#shadow)" />
+      <text x="95" y="28" text-anchor="middle" class="node-title">Driver</text>
+      <text x="95" y="48" text-anchor="middle" class="node-sub">apb_driver.sv</text>
+      <line x1="20" y1="58" x2="170" y2="58" stroke="#ffffff" stroke-opacity="0.2" />
+      <text x="95" y="74" text-anchor="middle" class="node-desc" style="fill: #e0e7ff;">2-Phase APB Bus Master</text>
+    </g>
+
+    <!-- ======================================================================= -->
+    <!-- 4. APB INTERFACE (apb_if.sv)                                            -->
+    <!-- ======================================================================= -->
+    <g transform="translate(35, 175)">
+      <!-- Interface Main Bar -->
+      <rect width="670" height="60" rx="10" fill="url(#ifGrad)" stroke="#34d399" stroke-width="2" filter="url(#glowGreen)" />
+      <text x="335" y="26" text-anchor="middle" class="node-title" style="font-size: 16px; letter-spacing: 1px;">APB INTERFACE (apb_if.sv)</text>
+      <text x="335" y="46" text-anchor="middle" class="node-sub" style="font-size: 11px; fill: #ecfdf5;">
+        PADDR[31:0] • PWDATA[31:0] • PRDATA[31:0] • PSEL • PENABLE • PWRITE • PSTRB[3:0] • PREADY • PSLVERR
+      </text>
+
+      <!-- Modports & Clocking Blocks Callouts -->
+      <rect x="25" y="6" width="105" height="18" rx="4" fill="#064e3b" stroke="#6ee7b7" stroke-width="1" />
+      <text x="77" y="19" text-anchor="middle" style="font-family: monospace; font-size: 9.5px; fill: #a7f3d0; font-weight: bold;">modport DRV (cb)</text>
+
+      <rect x="540" y="6" width="105" height="18" rx="4" fill="#064e3b" stroke="#6ee7b7" stroke-width="1" />
+      <text x="592" y="19" text-anchor="middle" style="font-family: monospace; font-size: 9.5px; fill: #a7f3d0; font-weight: bold;">modport MON (cb)</text>
+    </g>
+
+    <!-- Connection: Driver -> Interface -->
+    <path d="M 450 120 L 450 170" stroke="#818cf8" stroke-width="2.5" marker-end="url(#arrowBlue)" />
+    <rect x="460" y="135" width="70" height="18" rx="4" fill="#1e293b" stroke="#818cf8" stroke-width="1" />
+    <text x="495" y="148" text-anchor="middle" class="conn-label" style="font-size: 9.5px;">vif.cb_drv</text>
+
+    <!-- Connection: Interface -> Monitor -->
+    <path d="M 450 240 L 450 280" stroke="#c084fc" stroke-width="2.5" marker-end="url(#arrowPurple)" />
+    <rect x="460" y="248" width="70" height="18" rx="4" fill="#1e293b" stroke="#c084fc" stroke-width="1" />
+    <text x="495" y="261" text-anchor="middle" class="conn-label" style="font-size: 9.5px; fill: #d8b4fe;">vif.cb_mon</text>
+
+    <!-- Monitor Component -->
+    <g transform="translate(355, 285)">
+      <rect width="190" height="85" rx="10" fill="url(#monGrad)" stroke="#a855f7" stroke-width="1.5" filter="url(#shadow)" />
+      <text x="95" y="26" text-anchor="middle" class="node-title">Monitor</text>
+      <text x="95" y="45" text-anchor="middle" class="node-sub">apb_monitor.sv</text>
+      <line x1="20" y1="54" x2="170" y2="54" stroke="#ffffff" stroke-opacity="0.2" />
+      <text x="95" y="70" text-anchor="middle" class="node-desc" style="fill: #f3e8ff;">Passive Protocol Sampler</text>
+    </g>
+
+    <!-- Scoreboard Component -->
+    <g transform="translate(60, 370)">
+      <rect width="230" height="80" rx="10" fill="url(#sbGrad)" stroke="#34d399" stroke-width="1.5" filter="url(#shadow)" />
+      <text x="115" y="24" text-anchor="middle" class="node-title">Scoreboard</text>
+      <text x="115" y="42" text-anchor="middle" class="node-sub">apb_scoreboard.sv</text>
+      <line x1="20" y1="50" x2="210" y2="50" stroke="#ffffff" stroke-opacity="0.2" />
+      <text x="115" y="66" text-anchor="middle" class="node-desc" style="fill: #d1fae5;">Byte Associative Ref Memory</text>
+    </g>
+
+    <!-- Coverage Component -->
+    <g transform="translate(450, 370)">
+      <rect width="255" height="80" rx="10" fill="url(#covGrad)" stroke="#2dd4bf" stroke-width="1.5" filter="url(#shadow)" />
+      <text x="127" y="24" text-anchor="middle" class="node-title">Functional Coverage</text>
+      <text x="127" y="42" text-anchor="middle" class="node-sub">apb_coverage.sv</text>
+      <line x1="20" y1="50" x2="235" y2="50" stroke="#ffffff" stroke-opacity="0.2" />
+      <text x="127" y="66" text-anchor="middle" class="node-desc" style="fill: #ccfbf1;">Covergroups &amp; Cross Bins (100%)</text>
+    </g>
+
+    <!-- Connection: Monitor -> Scoreboard -->
+    <path d="M 355 330 L 175 330 L 175 365" stroke="#34d399" stroke-width="2.2" fill="none" marker-end="url(#arrowGreen)" />
+    <rect x="200" y="320" width="105" height="18" rx="4" fill="#0f172a" stroke="#34d399" stroke-width="1" />
+    <text x="252" y="333" text-anchor="middle" class="conn-label" style="font-size: 9px; fill: #6ee7b7;">mon2sb_mbx</text>
+
+    <!-- Connection: Monitor -> Coverage -->
+    <path d="M 545 330 L 575 330 L 575 365" stroke="#2dd4bf" stroke-width="2.2" fill="none" marker-end="url(#arrowGreen)" />
+    <rect x="585" y="320" width="105" height="18" rx="4" fill="#0f172a" stroke="#2dd4bf" stroke-width="1" />
+    <text x="637" y="333" text-anchor="middle" class="conn-label" style="font-size: 9px; fill: #5eead4;">mon2cov_mbx</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- 5. DESIGN UNDER TEST (DUT) & SVA ASSERTIONS (Bottom Area)                 -->
+  <!-- ========================================================================= -->
+
+  <!-- Interface -> DUT Connection -->
+  <path d="M 550 520 L 550 565" stroke="#f59e0b" stroke-width="3" marker-end="url(#arrowAmber)" />
+  <rect x="560" y="533" width="90" height="20" rx="4" fill="#1e293b" stroke="#f59e0b" stroke-width="1" />
+  <text x="605" y="547" text-anchor="middle" class="conn-label" style="font-size: 9.5px; fill: #fcd34d;">PORT MAP (DUT)</text>
+
+  <!-- DUT Box -->
+  <g transform="translate(180, 570)">
+    <rect width="450" height="200" rx="12" fill="url(#dutGrad)" stroke="#fbbf24" stroke-width="2" filter="url(#shadow)" />
+    
+    <text x="225" y="28" text-anchor="middle" class="node-title" style="font-size: 16px;">DESIGN UNDER TEST (DUT)</text>
+    <text x="225" y="46" text-anchor="middle" class="node-sub" style="font-size: 12px; fill: #fef3c7;">apb_slave_ram.sv</text>
+    <line x1="20" y1="56" x2="430" y2="56" stroke="#ffffff" stroke-opacity="0.3" />
+
+    <!-- Submodule 1: Address Decoder -->
+    <g transform="translate(20, 68)">
+      <rect width="195" height="52" rx="6" fill="#78350f" stroke="#fde68a" stroke-width="1" />
+      <text x="97" y="22" text-anchor="middle" class="node-title" style="font-size: 11.5px; fill: #fef08a;">Address Decoder</text>
+      <text x="97" y="38" text-anchor="middle" class="node-desc" style="fill: #fef3c7; font-size: 10px;">Range &amp; Alignment Check</text>
+    </g>
+
+    <!-- Submodule 2: Handshake & Error Logic -->
+    <g transform="translate(235, 68)">
+      <rect width="195" height="52" rx="6" fill="#78350f" stroke="#fde68a" stroke-width="1" />
+      <text x="97" y="22" text-anchor="middle" class="node-title" style="font-size: 11.5px; fill: #fef08a;">Zero-Wait Handshake</text>
+      <text x="97" y="38" text-anchor="middle" class="node-desc" style="fill: #fef3c7; font-size: 10px;">PREADY &amp; PSLVERR Logic</text>
+    </g>
+
+    <!-- Submodule 3: RAM Memory Array Core -->
+    <g transform="translate(20, 130)">
+      <rect width="410" height="56" rx="6" fill="#451a03" stroke="#f59e0b" stroke-width="1.2" />
+      <text x="205" y="24" text-anchor="middle" class="node-title" style="font-size: 12px; fill: #fde047;">apb_ram_memory_array.sv</text>
+      <text x="205" y="42" text-anchor="middle" class="node-desc" style="fill: #fed7aa; font-size: 10.5px;">
+        1024-Word × 32-bit (4 KB) • 4-Byte Lane Write Masking (PSTRB[3:0])
+      </text>
+    </g>
+  </g>
+
+  <!-- DUT -> SVA Connection -->
+  <path d="M 630 670 L 680 670" stroke="#f43f5e" stroke-width="2.5" marker-end="url(#arrowRose)" />
+  <rect x="635" y="648" width="40" height="18" rx="4" fill="#1e293b" stroke="#f43f5e" stroke-width="1" />
+  <text x="655" y="661" text-anchor="middle" style="font-family: monospace; font-size: 9px; fill: #fda4af; font-weight: bold;">bind</text>
+
+  <!-- SVA Protocol Checker Box -->
+  <g transform="translate(690, 570)">
+    <rect width="355" height="200" rx="12" fill="url(#svaGrad)" stroke="#fb7185" stroke-width="2" filter="url(#shadow)" />
+    
+    <text x="177" y="28" text-anchor="middle" class="node-title" style="font-size: 16px;">SVA PROTOCOL CHECKER</text>
+    <text x="177" y="46" text-anchor="middle" class="node-sub" style="font-size: 12px; fill: #ffe4e6;">apb_sva.sv</text>
+    <line x1="20" y1="56" x2="335" y2="56" stroke="#ffffff" stroke-opacity="0.3" />
+
+    <!-- SVA Rules List -->
+    <g transform="translate(15, 66)">
+      <rect width="325" height="120" rx="6" fill="#881337" stroke="#fecdd3" stroke-width="1" />
+      <text x="12" y="22" class="node-desc" style="fill: #ffe4e6; font-family: monospace; font-size: 10px;">✔ assert_setup_to_access (SETUP→ACCESS)</text>
+      <text x="12" y="42" class="node-desc" style="fill: #ffe4e6; font-family: monospace; font-size: 10px;">✔ assert_access_completion (!PENABLE)</text>
+      <text x="12" y="62" class="node-desc" style="fill: #ffe4e6; font-family: monospace; font-size: 10px;">✔ assert_stable_addr &amp; stable_ctrl</text>
+      <text x="12" y="82" class="node-desc" style="fill: #ffe4e6; font-family: monospace; font-size: 10px;">✔ assert_stable_wdata ($stable PWDATA/STRB)</text>
+      <text x="12" y="102" class="node-desc" style="fill: #ffe4e6; font-family: monospace; font-size: 10px;">✔ assert_pslverr_validity (Handshake Error)</text>
+    </g>
+  </g>
+
+</svg>

@@ -1,0 +1,55 @@
+name: APB RAM Controller CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  lint-and-validate:
+    name: SystemVerilog Linting & Structure Validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Verilator (Linter)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y verilator make
+
+      - name: Lint RTL Design Sources
+        run: |
+          echo "Linting RTL files..."
+          verilator --lint-only -Wall rtl/apb_ram_memory_array.sv rtl/apb_slave_ram.sv
+
+      - name: Validate Test Suite Structure
+        run: |
+          python3 -c "
+          import os
+          files = [
+              'rtl/apb_slave_ram.sv',
+              'rtl/apb_ram_memory_array.sv',
+              'tb/pkg/apb_pkg.sv',
+              'tb/if/apb_if.sv',
+              'tb/assertions/apb_sva.sv',
+              'tb/classes/apb_transaction.sv',
+              'tb/classes/apb_generator.sv',
+              'tb/classes/apb_driver.sv',
+              'tb/classes/apb_monitor.sv',
+              'tb/classes/apb_scoreboard.sv',
+              'tb/classes/apb_coverage.sv',
+              'tb/classes/apb_env.sv',
+              'tb/tb_top.sv',
+              'eda_playground/eda_playground_bundle.sv'
+          ]
+          for f in files:
+              assert os.path.exists(f), f'Missing file: {f}'
+          print('All verification and RTL components successfully validated!')
+          "
